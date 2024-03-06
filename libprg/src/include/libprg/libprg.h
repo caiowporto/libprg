@@ -2,14 +2,20 @@
 #define LIBPRG_LIBPRG_H
 
 typedef struct {
-    double value;
-    int error;
-} result_t;
+    int *vetor;
+    int tamanho;
 
-typedef enum { SUM, SUB } operation_t;
+} lista_t;
 
-result_t sub(double a, double b);
-result_t sum(double a, double b);
-result_t compute(double a, double b, operation_t op);
+// função para criar lista
+int criar_lista(lista_t *lista);
+
+// função inserir
+int inserir_lista()
+
+
+
+
+
 
 #endif
