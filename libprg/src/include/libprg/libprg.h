@@ -21,27 +21,29 @@ int inserir_lista();
 
 typedef struct fila fila_t;
 
+//criar - Criar a lista
+fila_t* fila (int capacidade);
+
 //enfileirar - Adiciona um elemento no final da fila
-fila_t enqueue(int capacidade);
+void enqueue(fila_t* fila, int elemento);
 
 //desenfileirar - Remove o elemento que está no início da fila
-int dequeue(fila_t* f);
+int dequeue(fila_t* fila);
 
 //início - Retorna o elemento que está no início da fila
-int head(fila_t) {
-};
+int gethead(fila_t* fila);
 
 //fim - Retorna o elemento que está no final da fila
-int tail(fila_t);
+int gettail(fila_t* fila);
 
 //tamanho - Retorna o total de elementos na fila
-int size();
+int getsize(fila_t* fila);
 
 //vazia - Indica se a fila está vazia ou não
-int empty(fila_t* f);
+bool isempty(fila_t* fila);
 
 //cheia - Indica se a fila está cheia ou não
-int full();
+bool isfull(fila_t* fila);
 
 
 
