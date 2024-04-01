@@ -18,7 +18,6 @@ int inserir_lista();
 
 
 
-
 typedef struct fila fila_t;
 
 //criar - Criar a lista
@@ -44,8 +43,6 @@ bool isempty(fila_t* fila);
 
 //cheia - Indica se a fila está cheia ou não
 bool isfull(fila_t* fila);
-
-
 
 
 #endif
