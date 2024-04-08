@@ -1,7 +1,6 @@
 #ifndef LIBPRG_LIBPRG_H
 #define LIBPRG_LIBPRG_H
 
-#include <libprg/libprg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -46,3 +45,22 @@ bool isfull(fila_t* fila);
 
 
 #endif
+
+typedef struct pilha pilha_t;
+
+//criar pilha
+pilha_t* pilha (int capacidade);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
