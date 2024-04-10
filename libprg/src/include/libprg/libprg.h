@@ -43,6 +43,34 @@ bool isempty(fila_t* fila);
 //cheia - Indica se a fila está cheia ou não
 bool isfull(fila_t* fila);
 
+#define num_max_contatos 10
+#define num_max_carac_fone 15
+#define num_max_carac_nome 50
+#define num_max_carac_email 50
+
+typedef struct {
+    char fone[num_max_carac_fone];
+    char nome[num_max_carac_nome];
+    char email[num_max_carac_email];
+} Contato;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif
 

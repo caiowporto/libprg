@@ -1,25 +1,22 @@
 cmake_minimum_required(VERSION 3.21)
-project(projeto-1-caiowporto C)
+
+project(libprg
+        LANGUAGES C
+        VERSION 0.0.1
+        DESCRIPTION "A minimal C library template using Modern CMake")
 
 set(CMAKE_C_STANDARD 17)
 
-include(FetchContent)
+add_subdirectory(libprg)
 
-FetchContent_Declare(
-        libprg
-        GIT_REPOSITORY https://github.com/caiowporto/libprg
-        GIT_TAG origin/main
-        # GIT_TAG 0.0.1
-        # You can reference a local directory instead
-        # URL file:///${CMAKE_CURRENT_SOURCE_DIR}/../libprg
-)
-FetchContent_MakeAvailable(libprg)
+# https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
 
-add_executable(projeto-1-caiowporto main.c)
-
-# linking libprg
-target_link_libraries(projeto-1-caiowporto PUBLIC libprg)
-
-
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    # For IDEs indexing
+    set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+endif()
 
 
