@@ -45,3 +45,22 @@ bool isfull(fila_t* fila);
 
 
 #endif
+
+typedef struct pilha pilha_t;
+
+//criar pilha
+pilha_t* pilha (int capacidade);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
