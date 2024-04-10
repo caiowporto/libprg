@@ -15,7 +15,8 @@ set(SOURCES
 add_library(libprg
         src/libprg/lista_linear.c
         src/libprg/7.c
-        src/libprg/lista_contato.c)
+        src/libprg/lista_contato.c
+        ../../../projeto-1-caiowporto/main.c)
 target_sources(libprg PUBLIC ${SOURCES})
 target_include_directories(libprg PUBLIC ${CMAKE_CURRENT_LIST_DIR}/src/include)
 

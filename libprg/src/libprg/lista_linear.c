@@ -25,6 +25,6 @@ fila_t* cria_fila(int capacidade) {
     }
 }
 
-void enqueue(fila_t* fila) {
-
-}
+//void enqueue(fila_t* fila) {
+//
+//}

@@ -1,7 +1,6 @@
 #ifndef LIBPRG_LIBPRG_H
 #define LIBPRG_LIBPRG_H
 
-#include <libprg/libprg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
