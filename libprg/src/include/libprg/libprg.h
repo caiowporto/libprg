@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+//------------------------ LISTA -------------------------------------------------
 
 typedef struct lista lista_t;
 
@@ -16,6 +17,7 @@ int criar_lista(lista_t *lista);
 int inserir_lista();
 
 
+//------------------------ FILA --------------------------------------------------
 
 typedef struct fila fila_t;
 
@@ -43,6 +45,8 @@ bool isempty(fila_t* fila);
 //cheia - Indica se a fila está cheia ou não
 bool isfull(fila_t* fila);
 
+
+//----------------------- PROJETO CONTATOS --------------------------------------
 #define num_max_contatos 10
 #define num_max_carac_fone 15
 #define num_max_carac_nome 50
@@ -55,6 +59,19 @@ typedef struct {
 } Contato;
 
 
+//----------------------- LISTA ENCADEADA ---------------------------------------
+
+typedef struct no no_t;
+
+int criar_listaenc(no_t inicio);
+
+void adicionarno(no_t** inicio, int dado);
+
+no_t* buscarno(no_t* inicio, int dado);
+
+bool removerno(no_t** inicio, int dado);
+
+void destruirlistaenc(no_t** inicio);
 
 
 
@@ -69,8 +86,7 @@ typedef struct {
 
 
 
-
-
+//-------------------------------------------------------------------------------
 
 #endif
 
