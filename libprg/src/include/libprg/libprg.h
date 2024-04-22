@@ -63,8 +63,6 @@ typedef struct {
 
 typedef struct no no_t;
 
-int criar_listaenc(no_t inicio);
-
 void adicionarno(no_t** inicio, int dado);
 
 no_t* buscarno(no_t* inicio, int dado);
@@ -72,6 +70,10 @@ no_t* buscarno(no_t* inicio, int dado);
 bool removerno(no_t** inicio, int dado);
 
 void destruirlistaenc(no_t** inicio);
+
+void adicionarnocirc(no_t** inicio, int dado);
+
+
 
 
 
