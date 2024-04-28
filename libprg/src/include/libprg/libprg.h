@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 //------------------------ LISTA -------------------------------------------------
 
@@ -46,18 +47,27 @@ bool isempty(fila_t* fila);
 bool isfull(fila_t* fila);
 
 
-//----------------------- PROJETO CONTATOS --------------------------------------
-#define num_max_contatos 10
-#define num_max_carac_fone 15
-#define num_max_carac_nome 50
-#define num_max_carac_email 50
+//----------------------- PROJETO LISTA CONTATOS --------------------------------
 
 typedef struct {
-    char fone[num_max_carac_fone];
-    char nome[num_max_carac_nome];
-    char email[num_max_carac_email];
-} Contato;
+    char fone[20];
+    char nome[50];
+    char email[100];
+} contato;
 
+#define max_contatos 20
+
+int adicionarcontato(contato lista[max_contatos], contato novocontato, int *tamanho);
+
+void visualizarcontatos(contato lista[max_contatos], int tamanho);
+
+contato buscarcontato(contato lista[max_contatos], int tamanho, int *posicao);
+
+void editarcontato(contato lista[max_contatos], int tamanho);
+
+void excluircontato(contato lista[max_contatos], int posicao);
+
+void salvarcontatosbinario(contato lista[max_contatos], int tamanho);
 
 //----------------------- LISTA ENCADEADA ---------------------------------------
 
