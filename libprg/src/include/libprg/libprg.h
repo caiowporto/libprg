@@ -53,21 +53,21 @@ typedef struct {
     char fone[20];
     char nome[50];
     char email[100];
-} contato;
+} listacontato;
 
 #define max_contatos 20
 
-int adicionarcontato(contato lista[max_contatos], contato novocontato, int *tamanho);
+void adicionarcontato(listacontato *contatos, int *num_contatos, const char *nome, const char *telefone, const char *email);
 
-void visualizarcontatos(contato lista[max_contatos], int tamanho);
+void visualizarcontatos(listacontato *contatos, int num_contatos);
 
-contato buscarcontato(contato lista[max_contatos], int tamanho, int *posicao);
+listacontato buscarcontato(listacontato *contatos, int num_contatos, const char *busca);
 
-void editarcontato(contato lista[max_contatos], int tamanho);
+void editar_contato(listacontato *contatos, int num_contatos, const char *nome, const char *novo_telefone, const char *novo_email);
 
-void excluircontato(contato lista[max_contatos], int posicao);
+void excluir_contato(listacontato *contatos, int *num_contatos, const char *nome);
 
-void salvarcontatosbinario(contato lista[max_contatos], int tamanho);
+void salvarcontatosbinario(listacontato *contatos, int num_contatos);
 
 //----------------------- LISTA ENCADEADA ---------------------------------------
 
