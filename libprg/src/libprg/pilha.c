@@ -17,3 +17,9 @@ pilha_t* criar_pilha(int capacidade) {
   pilha->capacidade = capacidade;
   return pilha;
 }
+
+// empilhar
+// desempilhar
+// tamanho
+// vazia
+//destruir_pilha
