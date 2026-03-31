@@ -2,6 +2,7 @@
 // Created by aluno on 17/03/2026.
 //
 
+#include <stdbool.h>
 #include <stdlib.h>
 
 typedef struct pilha {
@@ -21,5 +22,12 @@ pilha_t* criar_pilha(int capacidade) {
 // empilhar
 // desempilhar
 // tamanho
-// vazia
+
+bool vazia_p(pilha_t* pilha) {
+  if (pilha->topo == 0) {
+    return 1;
+  };
+  return 0;
+};
+
 //destruir_pilha
