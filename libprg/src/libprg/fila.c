@@ -67,3 +67,7 @@ int destruir_fila(fila_t* fila) {
     free(fila);
     return 0;
 }
+
+int fila_tamanho(fila_t* fila) {
+    return fila->tamanho;
+}
