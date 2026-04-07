@@ -31,5 +31,11 @@ int fila_tamanho(fila_t* fila);
 
 typedef struct lista_linear lista_linear_t;
 lista_linear_t* criar_lista_linear(int capacidade, int ordenada);
+void lista_adicionar(lista_linear_t* lista, int valor);
+int lista_busca(lista_linear_t* lista, int valor);
+int lista_busca_bin(lista_linear_t* lista, int valor);
+bool removel(lista_linear_t* lista, int valor);
+void lista_destruir(lista_linear_t* lista);
+int lista_tamanho(lista_linear_t* lista);
 
 #endif
