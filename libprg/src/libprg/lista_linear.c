@@ -78,26 +78,16 @@ int lista_busca_bin(lista_linear_t* lista, int valor) {
 }
 
 bool removel(lista_linear_t* lista, int valor) {
-    int indice = valor;
-    bool resultado;
-    if (indice <= -1) {
-        resultado = false;
+
+    int indice = lista_busca(lista, valor);
+    if (indice == -1) return false;
+
+    for (int i = indice; i < lista->tamanho - 1; i++) {
+        lista->elementos[i] = lista->elementos[i + 1];
     }
 
-    if (indice > -1) {
-        if (lista->ordenada) {
-            //remove ordenada
-            while (indice < lista->tamanho-1) {
-                lista->elementos[indice] = lista->elementos[indice + 1];
-                indice++;
-            }
-        } else {
-            lista->elementos[indice] = lista->elementos[lista->tamanho];
-        }
-        lista->tamanho--;
-        resultado = true;
-    }
-    return resultado;
+    lista->tamanho--;
+    return true;
 }
 
 void lista_destruir(lista_linear_t* lista) {
@@ -107,4 +97,12 @@ void lista_destruir(lista_linear_t* lista) {
 
 int lista_tamanho(lista_linear_t* lista) {
     return lista->tamanho;
+}
+
+int lista_first(lista_linear_t* lista) {
+    return lista->elementos[0];
+}
+
+int lista_percorrer(lista_linear_t* lista, int i) {
+    return lista->elementos[i];
 }

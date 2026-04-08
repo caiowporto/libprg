@@ -37,5 +37,7 @@ int lista_busca_bin(lista_linear_t* lista, int valor);
 bool removel(lista_linear_t* lista, int valor);
 void lista_destruir(lista_linear_t* lista);
 int lista_tamanho(lista_linear_t* lista);
+int lista_first(lista_linear_t* lista);
+int lista_percorrer(lista_linear_t* lista, int i);
 
 #endif
