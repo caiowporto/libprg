@@ -4,6 +4,8 @@
 #include <libprg/libprg.h>
 #include <stdlib.h>
 
+#define CAPACIDADE_INICIAL 10
+
 typedef struct lista_linear {
     int* elementos;
     int tamanho;
@@ -20,6 +22,15 @@ lista_linear_t* criar_lista_linear(int capacidade, int ordenada) {
 
     return lista_linear;
 }
+
+// lista_linear_t* criar_lista_linear(int ordenada) {
+//     lista_linear_t* lista = malloc(sizeof(lista_linear_t));
+//     lista->elementos = malloc(sizeof(int) * CAPACIDADE_INICIAL);
+//     lista->tamanho = 0;
+//     lista->capacidade = CAPACIDADE_INICIAL;
+//     lista->ordenada = ordenada;
+//     return lista;
+// }
 
 void lista_adicionar(lista_linear_t* lista, int valor) {
 
@@ -52,6 +63,14 @@ void lista_adicionar(lista_linear_t* lista, int valor) {
         lista->tamanho++;
     }
 }
+
+// int buscar{
+//     if (lista.ordenada) {
+//         indice = buscar_bin
+//     } else {
+//         inidice = buscar_linear
+//     }
+// }
 
 int lista_busca(lista_linear_t* lista, int valor) {
 

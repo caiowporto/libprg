@@ -27,7 +27,7 @@ int fila_inicio(fila_t* fila);
 int fila_fim(fila_t* fila);
 int fila_tamanho(fila_t* fila);
 
-// === LISTA ===
+// === LISTA LINEAR ===
 
 typedef struct lista_linear lista_linear_t;
 lista_linear_t* criar_lista_linear(int capacidade, int ordenada);
