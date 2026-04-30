@@ -40,4 +40,18 @@ int lista_tamanho(lista_linear_t* lista);
 int lista_first(lista_linear_t* lista);
 int lista_percorrer(lista_linear_t* lista, int i);
 
+// === LISTA ENCADEADA SIMPLES ===
+
+typedef struct no no_t;
+no_t* criar_lista_encadeada(int dado);
+void inserir_encadeada(no_t** inicio, int dado);
+bool remover_encadeada(no_t** inicio, int dado);
+no_t* buscar(no_t** inicio, int dado);
+void destruir_encadeada(no_t** inicio);
+
+// === LISTA ENCADEADA DUPLA ===
+
+typedef struct nod nod_t;
+
+
 #endif
