@@ -43,15 +43,21 @@ int lista_percorrer(lista_linear_t* lista, int i);
 // === LISTA ENCADEADA SIMPLES ===
 
 typedef struct no no_t;
-no_t* criar_lista_encadeada(int dado);
-void inserir_encadeada(no_t** inicio, int dado);
-bool remover_encadeada(no_t** inicio, int dado);
-no_t* buscar(no_t** inicio, int dado);
-void destruir_encadeada(no_t** inicio);
+typedef struct lista_encadeada lista_encadeada_t;
+no_t* criar_no(int dado);
+lista_encadeada_t* criar_lista_encadeada(bool ordenada);
+void inserir_encadeada(lista_encadeada_t* inicio, int dado);
+bool remover_encadeada(lista_encadeada_t* lista, int dado);
+no_t* buscar(lista_encadeada_t* lista, int dado);
+void destruir_encadeada(lista_encadeada_t* lista);
 
 // === LISTA ENCADEADA DUPLA ===
 
 typedef struct nod nod_t;
-
+nod_t* criar_lista_encadeada_dupla(int dado);
+void inserir_encadeada_dupla(nod_t** inicio, int dado);
+bool remover_encadeada_dupla(nod_t** inicio, int dado);
+nod_t *buscar_encadeada_dupla(nod_t **inicio, int dado);
+void destruir_encadeada_dupla(nod_t** inicio)
 
 #endif
