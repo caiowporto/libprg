@@ -65,4 +65,11 @@ void destruir_encadeada_dupla(nod_t** inicio);
 int* bubble_sort(int* vetor, int tamanho);
 int* merge_sort(int* vetor, int esquerda, int direita);
 
+// === TABELA DE DISPERSÃO(HASH) ===
+
+typedef struct noh noh_t;
+typedef struct dicionario dicionario_t;
+dicionario_t* criar_dicionario(int m);
+int inserir_hash(dicionario_t* d, char* chave, int valor);
+
 #endif
