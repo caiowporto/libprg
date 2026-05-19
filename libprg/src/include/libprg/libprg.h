@@ -72,4 +72,10 @@ typedef struct dicionario dicionario_t;
 dicionario_t* criar_dicionario(int m);
 int inserir_hash(dicionario_t* d, char* chave, int valor);
 
+// === ÁRVORE ===
+
+typedef struct noa noa_t;
+noa_t* criar_noa(int dado);
+noa_t* adicionar_noa(noa_t* raiz, int dado);
+
 #endif
