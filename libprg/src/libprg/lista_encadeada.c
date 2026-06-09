@@ -59,6 +59,7 @@ no_t* buscar(lista_encadeada_t* lista, int dado) {
     }
     return NULL;
 }
+
 void destruir_encadeada(lista_encadeada_t* lista) {
     no_t* atual = lista->inicio;
     while (atual != NULL) {
@@ -66,4 +67,15 @@ void destruir_encadeada(lista_encadeada_t* lista) {
         free(atual);
         atual = proximo;
     }
+}
+
+int retorna_valor(lista_encadeada_t* lista, int indice) {
+    no_t* atual = lista->inicio;
+    int i = 0;
+    while (atual != NULL && i < indice) {
+        atual = atual->proximo;
+        i++;
+    }
+    if (atual == NULL) return -1;
+    return atual->dado;
 }

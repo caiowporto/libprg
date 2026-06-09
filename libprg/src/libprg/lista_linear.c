@@ -36,7 +36,7 @@ void lista_adicionar(lista_linear_t* lista, int valor) {
 
     if (lista->tamanho >= lista->capacidade) {
         lista->capacidade *= 2;
-        lista->elementos = (int*) realloc(lista->elementos, sizeof(int)*lista->capacidade);
+        lista->elementos = realloc(lista->elementos, sizeof(int)*lista->capacidade);
     }
 
     if (lista->ordenada && lista->tamanho > 0) {
@@ -89,11 +89,15 @@ int lista_busca_bin(lista_linear_t* lista, int valor) {
     while (inicio <= fim) {
         int meio = inicio + (fim - inicio) / 2;
         if (lista->elementos[meio] == valor) {
+            return meio;
+        }
+        if (lista->elementos[meio] < valor) {
             inicio = meio + 1;
-        } else if (lista->elementos[meio] > valor) {
+        } else {
             fim = meio - 1;
         }
     }
+    return -1;
 }
 
 bool removel(lista_linear_t* lista, int valor) {
