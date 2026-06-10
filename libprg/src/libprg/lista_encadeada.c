@@ -69,13 +69,38 @@ void destruir_encadeada(lista_encadeada_t* lista) {
     }
 }
 
-int retorna_valor(lista_encadeada_t* lista, int indice) {
-    no_t* atual = lista->inicio;
-    int i = 0;
-    while (atual != NULL && i < indice) {
-        atual = atual->proximo;
-        i++;
+int primeiro_elemento(lista_encadeada_t* lista) {
+    if (lista == NULL || lista->inicio == NULL) {
+        return 0;
     }
-    if (atual == NULL) return -1;
+    return lista->inicio->dado;
+}
+
+int tamanho_lista(lista_encadeada_t* lista) {
+    if (lista == NULL) {
+        return 0;
+    }
+    int contador = 0;
+    no_t* atual = lista->inicio;
+    while (atual != NULL) {
+        contador++;
+        atual = atual->proximo;
+    }
+    return contador;
+}
+
+int percorrer_encadeada(lista_encadeada_t *lista, int indice) {
+    if (lista == NULL || lista->inicio == NULL) {
+        return -1;
+    }
+    no_t *atual = lista->inicio;
+    int contador = 0;
+    while (atual != NULL && contador < indice) {
+        atual = atual->proximo;
+        contador++;
+    }
+    if (atual == NULL) {
+        return -1;
+    }
     return atual->dado;
 }

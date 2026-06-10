@@ -50,7 +50,9 @@ void inserir_encadeada(lista_encadeada_t* inicio, int dado);
 bool remover_encadeada(lista_encadeada_t* lista, int dado);
 no_t* buscar(lista_encadeada_t* lista, int dado);
 void destruir_encadeada(lista_encadeada_t* lista);
-int retorna_valor(lista_encadeada_t* lista, int indice);
+int primeiro_elemento(lista_encadeada_t* lista);
+int tamanho_lista(lista_encadeada_t* lista);
+int percorrer_encadeada(lista_encadeada_t* lista, int indice);
 
 // === LISTA ENCADEADA DUPLA ===
 
