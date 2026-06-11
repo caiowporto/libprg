@@ -43,8 +43,7 @@ int inserir_hash(dicionario_t* d, char* chave, int valor) {
         return 1;
     }
     no->valor = valor;
-    // TODO tratar colisões
-    no->proximo = NULL;
+    no->proximo = d->vetor[indice];
     d->vetor[indice] = no;
     return 0;
 }
