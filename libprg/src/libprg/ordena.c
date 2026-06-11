@@ -1,6 +1,5 @@
 #include "libprg/libprg.h"
 
-
 int* bubble_sort(int* vetor, int tamanho) {
     for (int i = 0; i < tamanho; i++) {
         for (int j = 0; j < tamanho - i - 1; j++) {
@@ -11,8 +10,8 @@ int* bubble_sort(int* vetor, int tamanho) {
             }
         }
     }
+    return vetor;
 }
-
 
 int* merge(int* vetor, int esquerda, int meio, int direita) {
     int aux[direita - esquerda + 1];
@@ -53,6 +52,32 @@ int* merge_sort(int* vetor, int esquerda, int direita) {
     return vetor;
 }
 
+int* insertion_sort(int* vetor, int tamanho) {
+    for (int i = 1; i < tamanho - 1; ++i) {
+        int chave = vetor[i];
+        int j = i - 1;
+        while (j >= 0 && vetor[j] > chave) {
+            vetor[j+1] = vetor[j];
+            j--;
+        }
+        vetor[j+1] = chave;
+    }
+    return vetor;
+}
 
-// insertion_sort
-// selection_sort
+int* selection_sort(int* vetor, int tamanho) {
+    for (int i = 1; i < tamanho - 1; ++i) {
+        int menor = i;
+        for (int j = i+1; j < tamanho; ++j) {
+            if (vetor[j] < vetor[menor]) {
+                menor = j;
+            }
+        }
+        if (i != menor) {
+            int auxiliar = vetor[i];
+            vetor[i] = vetor[menor];
+            vetor[menor] = auxiliar;
+        }
+    }
+    return vetor;
+}
