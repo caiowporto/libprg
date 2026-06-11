@@ -85,5 +85,8 @@ noa_t* adicionar_noa(noa_t* raiz, int dado);
 void travessia_emordem(noa_t* raiz);
 void travessia_preordem(noa_t* raiz);
 void travessia_posordem(noa_t* raiz);
+noa_t* remover_valor(noa_t* raiz, int dado);
+bool busca(noa_t* raiz, int dado);
+bool busca_it(noa_t* raiz, int dado);
 
 #endif
