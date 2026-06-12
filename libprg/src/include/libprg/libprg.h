@@ -88,5 +88,6 @@ void travessia_posordem(noa_t* raiz);
 noa_t* remover_valor(noa_t* raiz, int dado);
 bool busca(noa_t* raiz, int dado);
 bool busca_it(noa_t* raiz, int dado);
+void destruir_no(noa_t* no);
 
 #endif
