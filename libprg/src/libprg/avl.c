@@ -5,8 +5,8 @@
 
 typedef struct noavl {
     int dado;
-    noavl_t *esquerda;
-    noavl_t *direita;
+    noavl_t* esquerda;
+    noavl_t* direita;
     int altura;
 } noavl_t;
 

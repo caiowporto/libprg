@@ -90,4 +90,17 @@ bool busca(noa_t* raiz, int dado);
 bool busca_it(noa_t* raiz, int dado);
 void destruir_no(noa_t* no);
 
+typedef struct noavl noavl_t;
+noavl_t *criar_noavl(int dado);
+int altura_avl(noavl_t *raiz);
+int fator_balanceamento(noavl_t *raiz);
+noavl_t *adicionar_noavl(noavl_t *raiz, int dado);
+noavl_t *rotacao_direita(noavl_t *V);
+noavl_t* rotacao_dupla_direita(noavl_t *v);
+noavl_t *rotacao_esquerda(noavl_t *V);
+noavl_t* rotacao_dupla_esquerda(noavl_t *v);
+noavl_t* balancear(noavl_t* v);
+noavl_t* remover_noavl(noavl_t* raiz, int dado);
+
+
 #endif
