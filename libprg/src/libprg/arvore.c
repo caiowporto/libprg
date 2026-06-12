@@ -64,9 +64,9 @@ void travessia_posordem(noa_t* raiz) {
 
 noa_t* remover_valor(noa_t* raiz, int dado) {
     if (raiz == NULL) return raiz;
-    if (valor < raiz->dado) {
+    if (dado < raiz->dado) {
         raiz->esquerda = remover_valor(raiz->esquerda, dado);
-    } else if (valor > raiz->dado) {
+    } else if (dado > raiz->dado) {
         raiz->direita = remover_valor(raiz->direita, dado);
     } else {
         // IF nó folha ou nó com um filho
