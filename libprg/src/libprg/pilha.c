@@ -65,3 +65,9 @@ int topo_pilha(pilha_t *pilha) {
 int tamanho_pilha(pilha_t *pilha) {
   return pilha->topo+1;
 }
+
+int pilha_percorrer(pilha_t* pilha, int i) {
+  return pilha->elementos[i];
+}
+
+
